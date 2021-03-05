@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Leonel Orellana</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- el siguiente orden de inportacion es el indicado para que funcione bootstrap
+        hay que respetar el orden
+
+        <script src="./js/popper.js"></script>
+    -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <h1>Proyecto Carrito</h1>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <img class="logo" src="./img/logo.png" alt="Tienda Leonel Orellana">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./"> Home </a>
+                    </li>
+                </ul>
+
+                <div class="cart-container">
+                    <button 
+                    class="btn btn-secondary cart" 
+                    type="button" 
+                    onClick="openCloseCart()">
+                        <img src="./img/cart.png" alt="Carrito">
+                    </button>
+                    <div class="cart-products hidden">vacio....</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!---Product List -->
+    <div class="container product-list">
+        <div class="row products">
+            <div class="col-3 product-container"> 
+                <div class="card product"> 
+                    <img src="" class="card-img-top" alt="${product.name}">
+                    <div class="card-body">
+                        <h5 class="card-title">${product.name}</h5>
+                        <p class="card-text">${product.extraInfo}</p>
+                        <p class="card-text">${product.price} $  / Unidad</p>
+                        <button type="button" class="btn btn-primary btn-cart">Añadir al carrito</button>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </div>
+</body>
+</html>
